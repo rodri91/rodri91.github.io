@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Polymer -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/av-icons.html">
+	<link rel="import" href="polymer_elements/main-tab.html">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>rodri91.github.io</h1>
+			<h3>Personal website</h3>
+		</div>
+	</header>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+		    <ul class="nav navbar-nav">
+		    	<li class="active"><a href="">Checklists</a></li>
+		    </ul>
+	  </div>
+	</nav>
+	<div class="container">
+		<ul class="tabs-wrapper">
+			<li class="tab">
+				<div class="header" style="background-color: #64B5F6">Design Review</div>
+				<div class="content">
+					<ul class="checklist">
+						<li><input type="checkbox"><label class="">Attribution is visible in every widget/addon.</label></li>
+						<li><input type="checkbox"><label class="">Report button was placed.</label></li>
+						<li><input type="checkbox"><label class="">Navigation arrows only on full carousel.</label></li>
+						<li><input type="checkbox"><label class="">Correct size of UCG (Mobile).</label></li>
+						<li><input type="checkbox"><label class="">Source selection is not Twitter, Pinterest or Flickr.</label></li>
+						<li><input type="checkbox"><label class="">Navigation arrows are vertical aligned.</label></li>
+						<li><input type="checkbox"><label class="">Empty and partial state of carousel.</label></li>
+						<li><input type="checkbox"><label class="">Widgets are correctly aligned.</label></li>
+					</ul>
+				</div>
+			</li>
+			<li class="tab">
+				<div class="header" style="background-color: #e57373">Stages links review.</div>
+				<div class="content">
+					<ul class="checklist">
+						<li><input type="checkbox"><label class="">The widgets renders fine.</label></li>
+						<li><input type="checkbox"><label class="">IE checked.</label></li>
+						<li><input type="checkbox"><label class="">FF checked.</label></li>
+						<li><input type="checkbox"><label class="">Safari checked.</label></li>
+						<li><input type="checkbox"><label class="">There's no customer css modifying olapic selectors.</label></li>
+					</ul>
+				</div>
+			</li>
+			<li class="tab">
+				<div class="header" style="background-color: #81C784">Self QA.</div>
+				<div class="content">
+					<ul class="checklist">
+						<li><input type="checkbox"><label class="">IE9 checked.</label></li>
+						<li><input type="checkbox"><label class="">IE10 checked.</label></li>
+						<li><input type="checkbox"><label class="">IE11 checked.</label></li>
+						<li><input type="checkbox"><label class="">FF checked.</label></li>
+						<li><input type="checkbox"><label class="">Safari checked.</label></li>
+						<li><input type="checkbox"><label class="">Outline on links removed.</label></li>
+						<li><input type="checkbox"><label class="">Links are not underlined.</label></li>
+						<li><input type="checkbox"><label class="">Error messages are visual adapted. (uploader)</label></li>
+						<li><input type="checkbox"><label class="">More than 7 photos loaded. (uploader - HD source)</label></li>
+						<li><input type="checkbox"><label class="">Input of album selector has a max-width.</label></li>
+						<li><input type="checkbox"><label class="">Font-icons render correctly.</label></li>
+						<li><input type="checkbox"><label class="">'Shop this look' carousel works fine.</label></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<footer>
+		<div class="container">
+			<span><b>Rodrigo Costanzo</b> for <a href="http://www.olapic.com">Olapic</a>. | <a href="https://www.facebook.com/rodri91">Facebook</a> <a href="https://twitter.com/rodri91">Twitter</a> <a href="https://instagram.com/rodric91">Instagram</a></span>
+		</div>
+	</footer>
+</body>
+<script>
+	$('input:checkbox').change(function(){
+    if($(this).is(":checked")) {
+        $(this).next('label').addClass('lineThrough');
+    } else {
+        $(this).next('label').removeClass('lineThrough');    }
+});
+</script>
+</html>

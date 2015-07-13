@@ -1,0 +1,53 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="main-tab">
+
+  <template>
+    <style>    
+      :host {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #core_card {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        min-width: 200px;
+        max-width: 400px;
+        height: auto;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+        background-color: rgb(255, 255, 255);
+      }
+      .header {
+        padding: 10px;
+        color: #fff;
+        font-weight: bold;
+      }
+      .content {
+        padding: 10px 13px;
+      }
+    </style>
+    <core-card id="core_card" layout vertical>
+        <div class="header" style$="{{bgcolor}}">{{title}}</div>
+        <p class="content">{{content}}</p>
+    </core-card>
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "main-tab",
+      properties: {
+        title: String,
+        bgcolor: String,
+        content: String
+      }
+    });
+
+  </script>
+
+</dom-module>
